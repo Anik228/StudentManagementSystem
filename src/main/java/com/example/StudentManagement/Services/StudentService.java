@@ -27,35 +27,7 @@ public class StudentService {
 
     public Student getStudentById (Long id){ return studentRepository.findById(id).orElse(null);}
 
-//    @Transactional
-//    public Student createStudent(StudentDto dto) {
-//        Student student = new Student();
-//        student.setName(dto.getName());
-//        student.setDepartment(dto.getDepartment());
-//        student.setCgpa(dto.getCgpa());
-//        student.setTotal_credit(dto.getTotalCredit());
-//        student.setEarn_credit(dto.getEarnCredit());
-//        student.setSemester(dto.getSemester());
-//
-//        String year = String.valueOf(java.time.Year.now().getValue());
-//        String semesterCode = mapSemesterToCode(student.getSemester());
-//        String deptCode = mapDepartmentToCode(student.getDepartment());
-//
-//        String semester = student.getSemester() + "-" + year;
-//        int random = (int) (Math.random() * 900) + 100;
-//
-//        String password = UUID.randomUUID().toString().replace("-", "").substring(0, 16);
-//
-//        String studentId = year + "-" + semesterCode + "-" + deptCode + "-" + random;
-//        student.setStudent_id(studentId);
-//        student.setSemester(semester);
-//
-//        student.setMake_dt(new java.util.Date());
-//        student.setUpdate_dt(new java.util.Date());
-//        student.setPassword(passwordEncoder.encode(password));
-//
-//        return studentRepository.save(student);
-//    }
+
 
     @Transactional
     public StudentResponseDto createStudent(StudentDto dto) {

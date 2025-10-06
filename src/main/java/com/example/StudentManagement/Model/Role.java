@@ -1,7 +1,7 @@
 package com.example.StudentManagement.Model;
 
 public enum Role {
-//    ADMIN,
-//    FACULTY,
+    ADMIN,
+    FACULTY,
     STUDENT
 }
